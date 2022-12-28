@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestVueJs</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="/app.js"></script>
+</head>
+<body>
+    <h1>Hello Vue JS 3</h1>
+    <div id="app">
+        
+        <button v-on:click="age++">increase age</button>
+        <button @click="age--">decrease age</button>
+        <div @click="changeTitle('otbringer')">change book title</div>
+        <div v-if="showBooks">
+        <h2>{{title}} - {{author}} - {{age}}</h2>
+        </div>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks"> hide books </span>
+            <span v-if="!showBooks"> show books </span>
+        </button>
+        <div v-show="showBooks">carentley showing books</div>
+    </div>
+    
+</body>
+</html>
